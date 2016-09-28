@@ -17,4 +17,8 @@ describe('dart scorer', function(){
   it('should award a bonus of 100 points if all radiuses are below 5', function() {
     expect(dartScorer([1, 2, 3, 4])).to.be.equal(140);
   });
+
+  it('should return 0 points if given an empty array', function() {
+    expect(dartScorer([])).to.be.equal(0);
+  });
 });
