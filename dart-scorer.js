@@ -17,5 +17,11 @@ module.exports = function(scoreArray) {
     return prev + curr;
   }, 0);
 
+  if(scoreArray.every(function(radius) {
+    return radius < 5;
+  })) {
+    result += 100;
+  }
+
   return result;
 };
